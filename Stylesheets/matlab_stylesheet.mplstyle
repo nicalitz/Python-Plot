@@ -1,0 +1,37 @@
+# INSTALL HELVETICA FONT FOR PLOTTING:
+# 1. Download Helvetica font as .ttf (from internet)
+# 2. Find matplotlib location:
+#       python -c "import matplotlib ; print(matplotlib.matplotlib_fname())"
+#  Copy Helvetica font [ttf] file to location
+#       C:\Anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf
+#  Add 'Helvetica' to font.sans-serif font list in matplotlibrc if not already added
+#  Remove font cache [fontList.py3k.cache] from:
+#       C:\Users\[username]\.matplotlib
+#  Enable font using the following command:
+#       plt.rc('font', family='Helvetica')
+
+# specify direction of tick markers (point inwards [in])
+xtick.direction : in
+ytick.direction : in
+
+# specify length and width of X-axis markers
+xtick.major.size : 6
+xtick.major.width : 1
+xtick.minor.size : 3
+xtick.minor.width : 1
+
+# specify length and width of Y-axis markers
+ytick.major.size : 6
+ytick.major.width : 1
+ytick.minor.size : 3
+ytick.minor.width : 1
+
+# modify dotted line default spacing (closer to Matlab dotted line)
+lines.dotted_pattern : 0.5,0.5
+
+# setup plotting parameters
+lines.linewidth : 0.6
+
+# configure matpltlib to use font [Helvetica, 10pt] for plot text
+font.family : Helvetica
+font.size : 10
